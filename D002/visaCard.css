@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+body {
+  background-color: whitesmoke;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 0 auto;
+  max-width: 34rem;
+  width: 90%;
+}
+input {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  width: auto;
+}
+label {
+  display: block;
+}
+input::placeholder {
+  color: #fff;
+}
+.card {
+  background-color: #171a1c;
+  border-radius: 14px;
+  color: #bebebe;
+  padding: 32px;
+  box-shadow: 10px 10px 10px gray;
+}
+.header {
+  margin-bottom: 7rem;
+}
+.title {
+  float: left;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.logo {
+  float: right;
+}
+.row {
+  margin-bottom: 1.5rem;
+}
+.content {
+  margin-bottom: 5rem;
+}
+.content input {
+  outline: none;
+}
+.card-number {
+  font-size: 26px;
+}
+.card-expired {
+  float: left;
+}
+.card-expired input {
+  font-size: 0.9rem;
+}
+.card-expired-month,
+.card-expired-year {
+  float: left;
+}
+.card-cvv {
+  float: right;
+}
+.card-cvv input {
+  width: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
