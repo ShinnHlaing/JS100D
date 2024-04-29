@@ -6,7 +6,7 @@ html {
   height: 100vh;
 }
 body {
-  background-color: whitesmoke;
+  background-color: gray;
   font-family: "Segoe UI", sans-serif;
   min-height: 100%;
   display: flex;
@@ -17,7 +17,16 @@ body {
   margin: 0 auto;
   max-width: 34rem;
   width: 90%;
+  transition: width 5s linear 5s;
+  /* animation: card 3s linear 1s 1 normal; */
 }
+.container:hover {
+  max-width: 34.5rem;
+  transform: translate(2px, 2px);
+}
+@keyframes card {
+}
+
 input {
   background-color: transparent;
   color: #fff;
