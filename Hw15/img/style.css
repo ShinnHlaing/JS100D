@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+}
+.mainnav .nav {
+  list-style-type: none;
+  display: inline;
+  margin: 1em;
+  font-size: 0.8em;
+  position: relative;
+}
+ion-icon {
+  color: cyan;
+  font-size: 1.5em;
+}
+.nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: yellow;
+  transition: all 1s linear;
+  transform: scale(0);
+  transform-origin: top left;
+}
+.nav:hover::after {
+  transform: scale(1.2);
+}
+#burger {
+  display: none;
+}
+[submenu],
+#cart {
+  display: none;
+}
+.hidenav .subnav {
+  display: none;
+}
+/* herosection */
+.herosection {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: black;
+  color: white;
+  /* height: 15em; */
+  box-shadow: 5px 5px 13px silver;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em;
+}
+.left {
+  flex: 40%;
+}
+.right {
+  flex: 60%;
+}
+.img1 {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img2 {
+  width: 100%;
+}
+.text {
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+.title {
+  font-size: 1.5em;
+}
+.price {
+  font-size: 1.2em;
+}
+.btn {
+  width: 5.5em;
+  height: 2em;
+  color: white;
+  background-color: cyan;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+}
+.btn:hover {
+  background-color: orange;
+}
+.banner {
+  position: relative;
+}
+.caption2 {
+  position: absolute;
+  bottom: 50%;
+  text-align: center;
+  left: 5%;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: slategray;
+  font-weight: bold;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  position: relative;
+  bottom: 4px;
+}
+.rootText {
+  font-size: 1.5em;
+}
+.subText {
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 4px;
+}
+.series {
+  padding: 5px;
+}
+/* item */
+.item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 4px;
+}
+
+.white7 {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.white8 {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card7 {
+  flex: 0 0 20%;
+}
+.card8 {
+  flex: 0 0 20%;
+}
+.model {
+  text-align: center;
+  padding: 1em;
+}
+.name {
+  font-size: 1em;
+}
+.dollar {
+  font-size: 0.8em;
+}
+.item {
+  display: none;
+}
+.checkbox>#series7:checked ~ .item > .card7 {
+  display: block;
+}
+.checkbox>#series7:checked ~ .item > .card8 {
+  display: none;
+}
+.checkbox>#series8:checked ~ .item > .card7 {
+  display: none;
+}
+.checkbox>#series8:checked ~ .item > .card8 {
+  display: block;
+}
+.checkbox #series8:checked ~ .item {
+  display: block;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 1em;
+  box-shadow: 5px 5px 15px silver;
+  position: relative;
+  bottom: 4px;
+  font-size: 0.8em;
+}
+.fmain {
+  font-size: 1.5em;
+}
+.fsub {
+  opacity: 0.6;
+  text-align: center;
+}
+[icons] {
+  margin: 1em;
+}
+[icons]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: yellow;
+  transition: all 1s linear;
+  transform: scale(0);
+  transform-origin: top left;
+}
+[icons]:hover::after {
+  transform: scale(1.2);
+}
+
+/* mobile view section */
+@media screen and (max-width: 720px) {
+  [submenu],
+  #cart {
+    display: block;
+  }
+  [mainmenu] {
+    display: none;
+  }
+  .mainnav {
+    display: none;
+  }
+  .hidenav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px 10px silver;
+    background-color: black;
+  }
+  .subnav .nav1 {
+    list-style-type: none;
+    font-size: 0.8em;
+    padding: 0.8em;
+    position: relative;
+  }
+  .nav1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: yellow;
+    transition: all 1s linear;
+    transform: scale(0);
+    transform-origin: top left;
+  }
+  .nav1:hover::after {
+    transform: scale(1.2);
+  }
+  #burger:checked ~ .hidenav .subnav {
+    display: flex;
+    flex-direction: column;
+  }
+  .herosection {
+    flex-direction: column;
+  }
+  .left,
+  .right {
+    flex: 100%;
+  }
+  .card7 {
+    flex: 0 0 25%;
+  }
+  .card8 {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card7 {
+    flex: 0 0 30%;
+  }
+  .card8 {
+    flex: 0 0 30%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card7 {
+    flex: 0 0 100%;
+  }
+  .card8 {
+    flex: 0 0 100%;
+  }
+}

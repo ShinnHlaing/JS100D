@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #1d1d1f;
+    /* background-color: #fbfbfd; */
+    background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+.header {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 20px 0px 0px 40px;
+}
+.watch {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.logo {
+    width: 80%;
+}
+.slogan {
+    position: relative;
+    /* background-color: darkgray; */
+    width: auto;
+    height: 5em;
+    color: #1d1d1f;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.slogan1 {
+    position: absolute;
+    bottom: 55%;
+    left: 2.5em;
+    border-right: 2px solid black;
+    width: 350px;
+    white-space: nowrap;
+    animation: anime 2s steps(30), cursor 1s step-end infinite;
+    overflow: hidden;
+}
+.slogan2 {
+    position: absolute;
+    bottom: 33%;
+    left: 4.3em;
+    width: 220px;
+    border-right: 2px solid black;
+    white-space: nowrap;
+    animation: anime 2s steps(25,end), cursor 1s step-end infinite;
+    overflow: hidden;
+}
+@keyframes anime {
+    from {
+        width: 0;   
+    }
+}
+@keyframes cursor {
+    0%{
+       border-color: transparent;
+    }
+    50% {
+       border-color: black;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.right {
+    position: relative;
+    display: flex;
+    flex: 50%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    /* background-image: linear-gradient(to right,#654EA3,#EAAFC8); */
+    width: 15em;
+    height: 16em;
+    margin: auto;
+    border-radius: 3%;
+    box-shadow: 5px 5px 10px silver;
+
+}
+.series {
+    position: absolute;
+    bottom: 5%;
+    color: rgb(218, 41, 41);
+    font-size: 1em;
+}
+.mainclock {
+    position: absolute;
+    width: 15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mainstrap {
+    position: absolute;
+    width: 15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn {
+    position: relative;
+}
+.save {
+    position: absolute;
+    bottom: -2em;
+    right: 2em;
+    color: white;
+    background-color: rgb(5, 122, 218);
+    border-radius: 5px;
+    width: 4em;
+    height: 2em;
+    font-size: 0.8em;
+}
+.left {
+    flex: 50%;
+    position: relative;
+    display: flex;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+}
+.lefttop {
+    display: flex;
+    flex-wrap: wrap;
+}
+.text1 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.line {
+    position: absolute;
+    top: 22%;
+    left: 10%;
+}
+.case {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    justify-content: center;
+    align-items: center;
+}
+.caseimg {
+    width: 5em;
+}
+.citem {
+    width: 5em;
+}
+.leftbottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+.text2 {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+}
+.line2 {
+    position: absolute;
+    top: 57%;
+    left: 10%;
+}
+.case2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 64%;
+    left: 8%;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 850px) {
+    .right,.left {
+        flex: 100%;
+    }
+}
+/* default c1 and s4 */
+#c2,#c3,#c4,#c5 {
+    visibility: hidden;
+}
+#s4,#s2,#s3,#s5 {
+    visibility: hidden;
+}
+input[type="radio"] {
+    display: none;
+}
+#case2:checked ~ .card>#c2  {
+    visibility: visible;
+    animation: smooth 1s linear;
+}
+#case3:checked ~ .card>#c3  {
+    visibility: visible;
+    animation: smooth 1s linear;
+}
+#case4:checked ~ .card>#c4  {
+    visibility: visible;
+    animation: smooth 3s linear;
+}
+#case5:checked ~ .card>#c5  {
+    visibility: visible;
+    animation: smooth 1s linear;
+}
+#strap4:checked ~ .card>#s4  {
+    visibility: visible;
+    animation: smooth 1s linear;
+}
+#strap2:checked ~ .card>#s2  {
+    visibility: visible;
+    animation: smooth 1s linear;
+}
+#strap3:checked ~ .card>#s3  {
+    visibility: visible;
+    animation: smooth 1s linear;
+}
+#strap5:checked ~ .card>#s5  {
+    visibility: visible;
+    animation: smooth 1s linear;
+}
+#case1:checked ~ .card>#c1  {
+    animation: smooth 0.5s linear;
+}
+#strap1:checked ~ .card>#s1  {
+    animation: smooth 1s linear;
+}
+@keyframes smooth {
+    from {
+       opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

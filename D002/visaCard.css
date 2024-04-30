@@ -17,16 +17,7 @@ body {
   margin: 0 auto;
   max-width: 34rem;
   width: 90%;
-  transition: width 5s linear 5s;
-  /* animation: card 3s linear 1s 1 normal; */
 }
-.container:hover {
-  max-width: 34.5rem;
-  transform: translate(2px, 2px);
-}
-@keyframes card {
-}
-
 input {
   background-color: transparent;
   color: #fff;
@@ -45,6 +36,11 @@ input::placeholder {
   color: #bebebe;
   padding: 32px;
   box-shadow: 10px 10px 10px gray;
+  transition: transform 1s;
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 .header {
   margin-bottom: 7rem;
